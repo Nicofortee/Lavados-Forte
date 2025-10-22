@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAVADOS FORTE | Tu Lavadero de Autos de Confianza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="unnamed.png" alt="LAVADOS FORTE Logo">
+            <h1>LAVADOS FORTE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios y Precios</a></li>
+                <li><a href="#turnos">Sacar Turno</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>¡Brillo y Protección para tu Vehículo!</h2>
+            <p>En LAVADOS FORTE, cuidamos tu auto o camioneta con la máxima dedicación. Elige la categoría que mejor se adapte a tus necesidades y déjanos el resto.</p>
+            <a href="#turnos" class="btn-principal">Agenda tu Lavado Ahora</a>
+            </section>
+
+        <section id="servicios">
+            <h2>Nuestros Servicios y Precios</h2>
+            <p>Selecciona tu categoría de vehículo y el nivel de lavado para ver los precios y el detalle de lo que incluye cada servicio.</p>
+
+            <div class="tarifario">
+                <h3>🚗 Autos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Contenido Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Económico</td>
+                            <td>$15.000</td>
+                            <td>Lavado exterior básico, secado a mano, limpieza de alfombras y cristales exteriores.</td>
+                        </tr>
+                        <tr>
+                            <td>Premium</td>
+                            <td>$20.000</td>
+                            <td>Económico + Aspirado interior completo, limpieza detallada de tablero y puertas, abrillantado de neumáticos, cera rápida.</td>
+                        </tr>
+                        <tr>
+                            <td>Deluxe</td>
+                            <td>$25.000</td>
+                            <td>Premium + Descontaminado de pintura (arcilla), encerado protector de larga duración, tratamiento de plásticos interiores, limpieza de motor.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>🚙 Camionetas </h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Contenido Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Económico</td>
+                            <td>$20.000</td>
+                            <td>Lavado exterior básico, secado a mano, limpieza de alfombras y cristales exteriores.</td>
+                        </tr>
+                        <tr>
+                            <td>Premium</td>
+                            <td>$25.000</td>
+                            <td>Económico + Aspirado interior completo, limpieza detallada de tablero y puertas, abrillantado de neumáticos, cera rápida.</td>
+                        </tr>
+                        <tr>
+                            <td>Deluxe</td>
+                            <td>$35.000</td>
+                            <td>Premium + Descontaminado de pintura (arcilla), encerado protector de larga duración, tratamiento de plásticos interiores, limpieza de motor.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="turnos">
+            <h2>Agenda tu Turno</h2>
+            <p>¡Reserva tu horario fácilmente! Selecciona el día y servicio para asegurar tu lugar.</p>
+            
+            <form action="procesar_turno.php" method="POST" class="formulario-turno">
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="vehiculo">Tipo de Vehículo:</label>
+                <select id="vehiculo" name="vehiculo" required>
+                    <option value="">Seleccione</option>
+                    <option value="auto">Auto</option>
+                    <option value="camioneta">Camioneta</option>
+                </select>
+                
+                <label for="servicio">Servicio Deseado:</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">Seleccione</option>
+                    <option value="economico">Económico</option>
+                    <option value="premium">Premium</option>
+                    <option value="deluxe">Deluxe</option>
+                </select>
+
+                <label for="fecha">Fecha y Hora Preferida:</label>
+                <input type="datetime-local" id="fecha" name="fecha" required>
+
+                <button type="submit" class="btn-enviar">Solicitar Turno</button>
+            </form>
+        </section>
+
+        <section id="galeria">
+            <h2>Nuestros Resultados</h2>
+            <p>Mira el brillo y la calidad que ofrecemos. Tu vehículo puede ser el próximo.</p>
+            <div class="contenedor-imagenes">
+                <img src="auto_brillante_1.jpg" alt="Auto lavado y brillante">
+                <img src="camioneta_limpia_2.jpg" alt="Camioneta con limpieza interior">
+                <img src="detalle_rueda_3.jpg" alt="Detalle de limpieza de ruedas">
+                </div>
+        </section>
+        
+        <section id="contacto">
+            <h2>Contáctanos y Ubicación</h2>
+            <p>¿Tienes alguna duda? Escríbenos o visítanos.</p>
+            <div class="info-contacto">
+                <p>📞 Teléfono: (221) 28-7674</p>
+                <p>📧 Email: nicolasforte0707@gmail.com</p>
+                <p>📍 Dirección: La Plata </p>
+                <p>⏰ Horario: Lunes a Jueves de 3:00 a 20:00 hs / Sábados y Domingos de 9:00 a 18:00 hs.</p>
+            </div>
+            
+    <footer>
+        <p>&copy; 2025 LAVADOS FORTE. Todos los derechos reservados.</p>
+        <p>Síguenos en [Icono de Instagram] [Icono de Facebook]</p>
+    </footer>
+
+</body>
+</html>
